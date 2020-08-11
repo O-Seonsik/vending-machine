@@ -89,6 +89,9 @@ void Widget::on_pbReset_clicked()
     message = "500 : " + fiveHun + "\n100 : " + hun + "\n50 : " + fifty + "\n10 : " + ten;
     const char *msg = message.c_str();
     money = 0;
+    ui->pbCoffee->setEnabled(false);
+    ui->pbTea->setEnabled(false);
+    ui->pbMilk->setEnabled(false);
     ui->lcdNumber->display(money);
     QMessageBox q;
     q.information(nullptr, "change", msg);
